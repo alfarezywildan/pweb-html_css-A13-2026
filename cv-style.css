@@ -1,51 +1,45 @@
-/* Mengatur font dan latar belakang luar */
+
 body {
-    background-color: #f4f4f4; /* Abu-abu muda di luar kertas CV */
+    background-color: #f4f4f4;
     font-family: sans-serif;
 }
 
-/* =========================================
-   1. STRUKTUR UTAMA (SYARAT CSS GRID)
-   ========================================= */
 .kertas-cv {
     background-color: white;
-    display: grid; /* Perintah sakti untuk membelah layout */
-    grid-template-columns: 1fr 2fr; /* Membagi jadi 2 bagian: 1 bagian kiri, 2 bagian kanan */
+    display: grid; 
+    grid-template-columns: 1fr 2fr; 
 }
 
-/* =========================================
-   2. DESAIN KOLOM KIRI (GELAP)
-   ========================================= */
 .kolom-kiri {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url('assets/background.jpeg'); /* Warna coklat sangat gelap */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url('assets/background.jpeg'); 
     color: white;
     position: sticky;
     top: 0;
-    height: 100vh; /* Membuat kolom kiri setinggi layar */
+    height: 100vh; 
 }
 
 .foto-profil {
     width: 150px;
     height: 150px;
-    border-radius: 50%; /* Membuat foto jadi bulat */
-    object-fit: cover; /* Biar foto tidak gepeng */
+    border-radius: 50%; 
+    object-fit: cover;
     display: block;
-    margin: 30px auto; /* Mengetengahkan foto */
-    border: 3px solid #9C7960; /* Bingkai coklat terang di pinggir foto */
+    margin: 30px auto;
+    border: 3px solid #9C7960;
 }
 
 .judul-kiri {
     color: white;
     font-size: 2rem;
-    letter-spacing: 2px; /* Jarak antar huruf diperlebar */
-    border-bottom: 2px solid #9C7960; /* Garis bawah judul */
+    letter-spacing: 2px; 
+    border-bottom: 2px solid #9C7960;
     padding-bottom: 10px;
     padding-top: 20px;
     padding-left: 40px;
 }
 
 .teks-kiri {
-    color: #cccccc; /* Abu-abu terang agar nyaman dibaca di background gelap */
+    color: #cccccc; 
     line-height: 1.6;
     margin-bottom: 30px;
     font-size: 0.9rem;
@@ -64,12 +58,9 @@ body {
     width: 30px;
     height: 30px;
     border-radius: 50%;
-    transition: transform 0.3s ease; /* Animasi halus saat hover */
+    transition: transform 0.3s ease; 
 }
 
-/* =========================================
-   3. DESAIN KOLOM KANAN (TERANG)
-   ========================================= */
 
 .isi-kanan {
     padding: 40px;
@@ -81,25 +72,23 @@ body {
     margin-bottom: 20px;
 }
 
-/* =========================================
-   4. DESAIN TIMELINE (REKAM JEJAK)
-   ========================================= */
+
 .garis-waktu {
-    border-left: 2px solid #ccc; /* Ini yang membuat garis lurus vertikal di kiri */
-    padding-left: 20px; /* Jarak teks dari garis */
+    border-left: 2px solid #ccc; 
+    padding-left: 20px; 
     margin-left: 10px;
 }
 
 .item-jejak {
     margin-bottom: 30px;
-    position: relative; /* Penting untuk titik timeline */
+    position: relative;
 }
 
-/* Membuat titik/lingkaran di garis timeline */
+/* Membuat titik/lingkaran */
 .item-jejak::before {
     content: '';
     position: absolute;
-    left: -27px; /* Menarik titik ke pas di atas garis */
+    left: -27px;
     width: 12px;
     height: 12px;
     background-color: white;
@@ -129,13 +118,13 @@ body {
 
 .item-pendidikan {
     margin-bottom: 30px;
-    position: relative; /* Penting untuk titik timeline */
+    position: relative; 
 }
 
 .item-pendidikan::before {
     content: '';
     position: absolute;
-    left: -27px; /* Menarik titik ke pas di atas garis */
+    left: -27px;
     width: 12px;
     height: 12px;
     background-color: white;
@@ -163,7 +152,7 @@ body {
     line-height: 1.6;
 }
 
-@media (max-width: 992px) { /* Tablet */
+@media (max-width: 992px) { 
     .hero-section {
         flex-direction: column;
         text-align: center;
@@ -189,7 +178,7 @@ body {
     }
 }
 
-@media (max-width: 768px) { /* Handphone (HP) */
+@media (max-width: 768px) { 
     .navbar {
         flex-direction: column;
         gap: 15px;
@@ -199,7 +188,7 @@ body {
         justify-content: center;
     }
     .floating-menu {
-        display: none; /* Sembunyikan menu floating di HP agar tidak mengganggu layar */
+        display: none; 
     }
     .name {
         font-size: 2.5rem;
