@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bahlil Lahadalia - Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Requirement: Position (Sticky) & Display Flex -->
+    <nav class="navbar">
+        <div class="logo">PORTFOLIO</div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <!-- Requirement: Call to action button ke page CV -->
+            <li><a href="cv.html" class="btn-cta">Lihat CV Creative</a></li>
+        </ul>
+    </nav>
+
+    <!-- Requirement: Position Fixed untuk Floating Menu di Kanan -->
+    <div class="floating-menu">
+        <a href="#home" title="Home">🏠</a>
+        <a href="#about" title="About">👤</a>
+        <a href="#contact" title="Contact">📞</a>
+    </div>
+
+    <!-- Hero Section -->
+    <header id="home" class="hero-section">
+        <div class="hero-content">
+            <p class="greeting">Halo, Nama Saya</p>
+            <h1 class="name">Bahlil Lahadalia</h1>
+            <h3 class="role">Menteri ESDM | Pengusaha | Tokoh Nasional</h3>
+            <p class="description">
+                Berdedikasi dalam mendorong pertumbuhan ekonomi Indonesia melalui kebijakan investasi strategis, hilirisasi sumber daya alam, dan pemberdayaan pengusaha lokal demi mewujudkan Indonesia Emas.
+            </p>
+            <a href="#about" class="learn-more">Learn More About Me</a>
+        </div>
+        <div class="hero-image-container">
+            <!-- Gunakan foto portrait Bahlil berbentuk lingkaran sesuai template -->
+            <img src="assets/foto_bahlil.jpg" alt="Bahlil Lahadalia" class="profile-img">
+            <a href="https://maps.google.com/?q=Jakarta,Indonesia" target="_blank" class="location-link">Jakarta, Indonesia</a>
+        </div>
+    </header>
+
+    <!-- About Me Section -->
+    <section id="about" class="section-container about-section">
+        <h2 class="section-title">Tentang Saya</h2>
+        <p class="about-subtitle">Menteri Energi dan Sumber Daya Mineral / Pengusaha</p>
+        <p class="about-text">
+            Berawal dari pengusaha lokal hingga menjadi pejabat negara, saya memiliki komitmen kuat untuk memajukan iklim investasi dan sektor energi di Indonesia. Fokus utama saya adalah menciptakan ekosistem bisnis yang adil, mendorong hilirisasi mineral, dan memastikan transisi energi berjalan optimal.
+        </p>
+
+        <h3 class="sub-title-center">Fokus & Keahlian</h3>
+        <!-- Requirement: Display Grid -->
+        <div class="skills-grid"></div>
+        <div class="skill-box" tabindex="0">
+                <div class="skill-title"> PAWANG GAS BUMI </div>
+                <div class="skill-desc">Pak Bahlil Lahadalia berupaya meningkatkan lifting minyak dan gas bumi dengan mengevaluasi dan memperbaiki regulasi yang menghambat peningkatan lifting migas.</div>
+            </div>
+            
+            <div class="skill-box" tabindex="0">
+                <div class="skill-title"> AHLI BERTAHAN HIDUP </div>
+                <div class="skill-desc"> Ia bukan pengusaha jalur privilege. Sebelum menjadi Ketua Umum HIPMI (Himpunan Pengusaha Muda Indonesia), Bahlil memulai segalanya dari nol sebagai penjaja kue dan loper koran saat SD.</div>
+            </div>
+            
+            <div class="skill-box" tabindex="0">
+                <div class="skill-title"> SENYUM BAHILIL </div>
+                <div class="skill-desc">Senyum lebar bahlil seringkali membuat banyak orang terpana. Entah dalam kondisi apapun, bahlil akan menunjukan senyumannya.</div>
+            </div>
+            
+            <div class="skill-box" tabindex="0">
+                <div class="skill-title">HYPEBEAST PEJABAT  </div>
+                <div class="skill-desc">Sering mematahkan aturan seragam menteri yang kaku. Ia gemar memadukan kemeja rapi dengan sneakers kekinian atau jaket kulit ala anak motor saat turun ke lapangan.</div>
+            </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="section-container portfolio-section">
+        <h2 class="section-title">Jejak Kinerja & Portofolio</h2>
+        <div class="portfolio-layout">
+            <aside class="portfolio-sidebar">
+                <ul>
+                    <li class="active">Semua</li>
+                    <li>Investasi</li>
+                    <li>Hilirisasi</li>
+                    <li>Ekonomi Makro</li>
+                    <li>Kebijakan</li>
+                </ul>
+            </aside>
+            <div class="portfolio-grid">
+                <!-- Requirement: Pseudo-class hover pada item -->
+                <div class="port-card">
+                    <h4>Peningkatan Target Investasi</h4>
+                </div>
+                <div class="port-card">
+                    <h4>Ekosistem EV Battery</h4>
+                </div>
+                <div class="port-card">
+                    <h4>Pemberdayaan UMKM</h4>
+                </div>
+                <div class="port-card">
+                    <h4>Satgas Investasi IKN</h4>
+                </div>
+                <div class="port-card">
+                    <h4>Hilirisasi Nikel</h4>
+                </div>
+                <div class="port-card">
+                    <h4>Kebijakan Mineral Kritis</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section-container contact-section">
+        <h2 class="section-title">Hubungi Saya</h2>
+        <div class="contact-layout">
+            <div class="contact-info">
+                <h3>Contact Info</h3>
+                <p><img src="assets/email.jpeg" alt="Email" width="20" height="20"/> kontak@bahlil-portfolio.id</p>
+                <a href="https://www.esdm.go.id/" target="_blank">
+                    <p>🏢 Kementerian ESDM, Jakarta</p>
+                </a>
+                <br>
+                <h3>Social Handles</h3>
+                <a href="https://www.instagram.com/bahlillahadalia/?hl=en" target="_blank">
+                    <p><img src="assets/instagram.jpeg" alt="Instagram" width="20" height="20"/> @bahlillahadalia</p>
+                </a>
+                <a href="https://twitter.com/bahlillahadalia" target="_blank">
+                    <p><img src="assets/twitter.jpeg" alt="Twitter" width="20" height="20"/> @bahlillahadalia</p>
+                </a>
+            </div>
+            <form class="contact-form">
+                <input type="text" placeholder="Nama Anda" required>
+                <input type="email" placeholder="Email" required>
+                <textarea rows="4" placeholder="Pesan atau Aspirasi" required></textarea>
+                <button type="submit" class="btn-submit">Kirim Pesan</button>
+            </form>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-logo">BAHLIL</div>
+        <p>Home | About | Portfolio | Contact</p>
+        <p class="copyright">&copy; 2026 - Bahlil Lahadalia. Designed By Kelompok A13</p>
+    </footer>
+
+</body>
+</html>

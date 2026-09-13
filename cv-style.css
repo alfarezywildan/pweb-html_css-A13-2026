@@ -1,0 +1,215 @@
+/* Mengatur font dan latar belakang luar */
+body {
+    background-color: #f4f4f4; /* Abu-abu muda di luar kertas CV */
+    font-family: sans-serif;
+}
+
+/* =========================================
+   1. STRUKTUR UTAMA (SYARAT CSS GRID)
+   ========================================= */
+.kertas-cv {
+    background-color: white;
+    display: grid; /* Perintah sakti untuk membelah layout */
+    grid-template-columns: 1fr 2fr; /* Membagi jadi 2 bagian: 1 bagian kiri, 2 bagian kanan */
+}
+
+/* =========================================
+   2. DESAIN KOLOM KIRI (GELAP)
+   ========================================= */
+.kolom-kiri {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url('assets/background.jpeg'); /* Warna coklat sangat gelap */
+    color: white;
+    position: sticky;
+    top: 0;
+    height: 100vh; /* Membuat kolom kiri setinggi layar */
+}
+
+.foto-profil {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%; /* Membuat foto jadi bulat */
+    object-fit: cover; /* Biar foto tidak gepeng */
+    display: block;
+    margin: 30px auto; /* Mengetengahkan foto */
+    border: 3px solid #9C7960; /* Bingkai coklat terang di pinggir foto */
+}
+
+.judul-kiri {
+    color: white;
+    font-size: 2rem;
+    letter-spacing: 2px; /* Jarak antar huruf diperlebar */
+    border-bottom: 2px solid #9C7960; /* Garis bawah judul */
+    padding-bottom: 10px;
+    padding-top: 20px;
+    padding-left: 40px;
+}
+
+.teks-kiri {
+    color: #cccccc; /* Abu-abu terang agar nyaman dibaca di background gelap */
+    line-height: 1.6;
+    margin-bottom: 30px;
+    font-size: 0.9rem;
+    padding-inline: 40px;
+    text-align: justify;
+}
+
+.contact{
+    display: flex;
+    justify-content: center;
+    gap: 15px; 
+    margin-top: 65px;
+}
+
+.contact img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    transition: transform 0.3s ease; /* Animasi halus saat hover */
+}
+
+/* =========================================
+   3. DESAIN KOLOM KANAN (TERANG)
+   ========================================= */
+
+.isi-kanan {
+    padding: 40px;
+}
+
+.judul-kanan {
+    color: #2A2522;
+    letter-spacing: 3px;
+    margin-bottom: 20px;
+}
+
+/* =========================================
+   4. DESAIN TIMELINE (REKAM JEJAK)
+   ========================================= */
+.garis-waktu {
+    border-left: 2px solid #ccc; /* Ini yang membuat garis lurus vertikal di kiri */
+    padding-left: 20px; /* Jarak teks dari garis */
+    margin-left: 10px;
+}
+
+.item-jejak {
+    margin-bottom: 30px;
+    position: relative; /* Penting untuk titik timeline */
+}
+
+/* Membuat titik/lingkaran di garis timeline */
+.item-jejak::before {
+    content: '';
+    position: absolute;
+    left: -27px; /* Menarik titik ke pas di atas garis */
+    width: 12px;
+    height: 12px;
+    background-color: white;
+    border: 2px solid #9C7960;
+    border-radius: 50%;
+}
+
+.jabatan {
+    margin: 5px;
+    color: #2A2522;
+    font-size: 1.1rem;
+}
+
+.tahun {
+    margin: 5px;
+    color: #9C7960;
+    font-weight: bold;
+    font-style: italic;
+    font-size: 0.9rem;
+}
+
+.item-jejak p {
+    margin: 5px;
+    color: #555;
+    line-height: 1.6;
+}
+
+.item-pendidikan {
+    margin-bottom: 30px;
+    position: relative; /* Penting untuk titik timeline */
+}
+
+.item-pendidikan::before {
+    content: '';
+    position: absolute;
+    left: -27px; /* Menarik titik ke pas di atas garis */
+    width: 12px;
+    height: 12px;
+    background-color: white;
+    border: 2px solid #9C7960;
+    border-radius: 50%;
+}
+
+.jenjang {
+    margin: 5px;
+    color: #2A2522;
+    font-size: 1.1rem;
+}
+
+.tempat {
+    margin: 5px;
+    color: #9C7960;
+    font-weight: bold;
+    font-style: italic;
+    font-size: 0.9rem;
+}
+
+.item-pendidikan p {
+    margin: 5px;
+    color: #555;
+    line-height: 1.6;
+}
+
+@media (max-width: 992px) { /* Tablet */
+    .hero-section {
+        flex-direction: column;
+        text-align: center;
+    }
+    .hero-content {
+        padding-right: 0;
+        margin-bottom: 40px;
+    }
+    .portfolio-layout, .contact-layout {
+        flex-direction: column;
+    }
+    .portfolio-sidebar {
+        width: 100%;
+    }
+    .portfolio-sidebar ul {
+        display: flex;
+        gap: 15px;
+        overflow-x: auto;
+    }
+    .portfolio-sidebar li {
+        white-space: nowrap;
+        border-bottom: none;
+    }
+}
+
+@media (max-width: 768px) { /* Handphone (HP) */
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+    }
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .floating-menu {
+        display: none; /* Sembunyikan menu floating di HP agar tidak mengganggu layar */
+    }
+    .name {
+        font-size: 2.5rem;
+    }
+    .section-container {
+        padding: 40px 5%;
+        margin: 20px 2%;
+    }
+    .profile-img {
+        width: 200px;
+        height: 200px;
+    }
+}
